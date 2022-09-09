@@ -1,0 +1,104 @@
+<?php
+	include("action_connexion.php");
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./fontAwesomee/css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="connexion.css">
+	<title>CityMart_connect</title>
+</head>
+<body>
+	<div class="contenu">
+		<input type="checkbox" id="logsign">
+		<div class="sign">
+			<div class="sign_head">
+				<h6>Create Account</h6>
+				<div class="social_sign">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+				<p>Or use your email for registration</p>
+			</div>
+			<form method="post">
+				<div class="user_sign">
+					<label for="user_sign">
+						<i class="fa fa-user"></i>
+					</label>
+					<input type="text" name="name_sign" id="user_sign" placeholder="Name" autocomplete="off">
+				</div>
+				<div class="email_sign">
+					<label for="email_sign">
+						<i class="fa-solid fa-envelope"></i>
+					</label>
+					<input type="email" name="email_sign" id="email_sign" placeholder="Email" autocomplete="off">
+				</div>
+				<div class="pass_sign">
+					<label for="pass_user">
+						<i class="fa-solid fa-lock"></i>
+					</label>
+					<input type="password" name="password_sign" id="pass_user" maxlength="14" placeholder="Password">
+				</div>
+				<input type="submit" name="sign_submit" value="SIGN UP">
+			</form>
+			<div class="error_sign">
+				<?php echo $sign_erreur;?>
+			</div>
+		</div>
+
+
+
+		<div class="log">
+			<div class="log_head">
+				<h6>Sign in</h6>
+				<div class="social_log">
+					<a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+					<a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+				</div>
+				<p>Or user your account</p>
+			</div>
+			<form method="post">
+				<div class="email_log">
+					<label for="email_log">
+						<i class="fa-solid fa-envelope"></i>
+					</label>
+					<input type="email" name="email_log" id="email_log" placeholder="Email" autocomplete="off" >
+				</div>
+				<div class="pass_log">
+					<label for="pass_user">
+						<i class="fa-solid fa-lock"></i>
+					</label>
+					<input type="password" name="password_log" id="pass_user" maxlength="14" placeholder="Password" >
+				</div>
+				<input type="submit" name="log_submit" value="SIGN IN">
+			</form>
+			<a href="connexion_update.php">Forgot yout password?</a>
+			<div class="error_log">
+				<?php echo $log_erreur;?>
+			</div>
+		</div>
+		<div class="box_sign">
+			<div class="logo_sign">
+				<h5>City<span>Mart</span></h5>
+			</div>
+			<p>Enter your personnal details and start journey with us</p>
+			<label for="logsign">sign up</label><br><br>
+			<a href="page_d'accueil.html">EXIT</a>
+		</div>
+		<div class="box_log">
+			<div class="logo_log">
+				<h5>City<span>Mart</span></h5>
+			</div>
+			<p>To keep connected with us please login with your personal info</p>
+			<label for="logsign">sign in</label><br><br>
+			<a href="page_d'accueil.html">EXIT</a>
+		</div>
+	</div>
+</body>
+</html>
